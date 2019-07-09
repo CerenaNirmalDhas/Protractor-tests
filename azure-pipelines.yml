@@ -19,3 +19,20 @@ steps:
   inputs:
       command: 'install'
       workingDir: 'Source/EndToEndTests/EndToEndTests'
+
+- task: CmdLine@2
+  inputs:
+    script: 'node_modules/protractor/bin/webdriver-manager update'
+    workingDirectory: 'Source/EndToEndTests/EndToEndTests'
+
+- task: CmdLine@2
+  inputs:
+      script: 'node_modules/protractor/bin/protractor e2e/protractor.conf.js'
+      workingDirectory: 'Source/EndToEndTests/EndToEndTests'
+
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: 'xmlresults.xml'
+    searchFolder: '$(System.DefaultWorkingDirectory)/Source/EndToEndTests/EndToEndTests/testResults/$(time)/'
