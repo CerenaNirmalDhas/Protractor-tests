@@ -11,10 +11,16 @@ pool:
 
 steps:
 
+- task: ExtractFiles@1
+  inputs:
+    archiveFilePatterns: '*.zip'
+    destinationFolder: 'ProtractorPackage'
+    cleanDestinationFolder: true
+
 - task: Npm@1
   inputs:
       command: 'install'
-      workingDir: 'ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
+      workingDir: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
 
 - task: CmdLine@2
   inputs:
@@ -32,3 +38,5 @@ steps:
     testResultsFormat: 'JUnit'
     testResultsFiles: 'xmlresults.xml'
     searchFolder: '$(System.DefaultWorkingDirectory)/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/testResults/$(time)/'
+
+
