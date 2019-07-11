@@ -24,7 +24,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'dir'
+    script: 'webdriver-manager update'
     workingDirectory: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/node_modules/protractor/bin'
 
 - task: CmdLine@2
