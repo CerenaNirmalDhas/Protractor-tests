@@ -21,16 +21,10 @@ steps:
   inputs:
       command: 'install'
       workingDir: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
-  
-- task: BatchScript@1
-  inputs:
-    filename: 'C:\Program Files\nodejs\'
-    arguments: 'node_modules\protractor\bin\webdriver-manager update'
-    workingFolder: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
 
 - task: CmdLine@2
   inputs:
-    script: '/node_modules/protractor/bin/webdriver-manager update'
+    script: 'dir'
     workingDirectory: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
 
 - task: CmdLine@2
