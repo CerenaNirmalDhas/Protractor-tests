@@ -24,12 +24,12 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'node_modules/protractor/bin/webdriver-manager update'
+    script: '/node_modules/protractor/bin/webdriver-manager update'
     workingDirectory: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
 
 - task: CmdLine@2
   inputs:
-      script: 'node_modules/protractor/bin/protractor e2e/protractor.conf.js'
+      script: '/node_modules/protractor/bin/protractor e2e/protractor.conf.js'
       workingDirectory: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
 
 - task: PublishTestResults@2
