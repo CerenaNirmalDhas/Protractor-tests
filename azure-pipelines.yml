@@ -25,18 +25,17 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'node_modules/protractor/bin/webdriver-manager update'
-    workingDirectory: 'ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
+    workingDirectory: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
 
 - task: CmdLine@2
   inputs:
       script: 'node_modules/protractor/bin/protractor e2e/protractor.conf.js'
-      workingDirectory: 'ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
-
+      workingDirectory: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
 
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: 'xmlresults.xml'
-    searchFolder: '$(System.DefaultWorkingDirectory)/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/testResults/$(time)/'
+    searchFolder: '$(System.DefaultWorkingDirectory)/ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/testResults/$(time)/'
 
 
