@@ -24,8 +24,8 @@ steps:
   
 - task: BatchScript@1
   inputs:
-    filename: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
-    arguments: 'node_modules/protractor/bin/webdriver-manager update'
+    filename: 'C:\Program Files\nodejs\'
+    arguments: 'node_modules\protractor\bin\webdriver-manager update'
     workingFolder: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
 
 - task: CmdLine@2
