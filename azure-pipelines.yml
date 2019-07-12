@@ -14,13 +14,13 @@ steps:
 - task: ExtractFiles@1
   inputs:
     archiveFilePatterns: '*.zip'
-    destinationFolder: 'ProtractorPackage'
+    destinationFolder: 'ProtractorPackage2'
     cleanDestinationFolder: true
 
 - task: Npm@1
   inputs:
       command: 'install'
-      workingDir: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
+      workingDir: 'ProtractorPackage2/ProtractorEndToEndTest-master2/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
 
 - task: Npm@1
   inputs:
