@@ -24,9 +24,9 @@ steps:
 
 - task: Npm@1
   inputs:
-    command: 'custom'
+    command: 'install'
     workingDir: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
-    customCommand: 'npm install webdriver-manager'
+    customCommand: 'webdriver-manager'
 
 
 - task: CmdLine@2
