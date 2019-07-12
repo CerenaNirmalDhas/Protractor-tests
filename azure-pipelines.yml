@@ -22,9 +22,16 @@ steps:
       command: 'install'
       workingDir: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
 
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
+    customCommand: 'npm run webdriver-manager'
+
+
 - task: CmdLine@2
   inputs:
-    script: 'webdriver-manager start'
+    script: 'webdriver-manager update --ignore_ssl --proxy'
     workingDirectory: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/node_modules/protractor/bin'
 
 - task: CmdLine@2
