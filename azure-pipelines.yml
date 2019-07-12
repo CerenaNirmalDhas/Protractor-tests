@@ -31,7 +31,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'webdriver-manager update --ignore_ssl --proxy'
+    script: 'node webdriver-manager update --ignore_ssl --proxy'
     workingDirectory: 'ProtractorPackage/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/node_modules/protractor/bin'
 
 - task: CmdLine@2
