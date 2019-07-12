@@ -36,7 +36,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-      script: 'dir'
+      script: 'node protractor --version'
       workingDirectory: 'ProtractorPackage2/ProtractorEndToEndTest-master2/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/e2e/'
 
 - task: PublishTestResults@2
