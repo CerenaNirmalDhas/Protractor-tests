@@ -17,6 +17,11 @@ steps:
     destinationFolder: 'ProtractorPackage2'
     cleanDestinationFolder: true
 
+- task: CmdLine@2
+  inputs:
+    script: 'dir'
+    workingDirectory: 'ProtractorPackage2/ProtractorEndToEndTest-master3'
+
 - task: Npm@1
   inputs:
       command: 'install'
