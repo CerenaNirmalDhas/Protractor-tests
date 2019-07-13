@@ -20,36 +20,36 @@ steps:
 - task: Npm@1
   inputs:
       command: 'install'
-      workingDir: 'ProtractorPackage2/ProtractorEndToEndTest-master2/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
+      workingDir: 'ProtractorPackage2/ProtractorEndToEndTest-master3/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
 
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: 'ProtractorPackage2/ProtractorEndToEndTest-master2/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
+    workingDir: 'ProtractorPackage2/ProtractorEndToEndTest-master3/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
     customCommand: 'webdriver-manager'
 
 
 - task: CmdLine@2
   inputs:
     script: 'node webdriver-manager update --ignore_ssl --proxy'
-    workingDirectory: 'ProtractorPackage2/ProtractorEndToEndTest-master2/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/node_modules/protractor/bin'
+    workingDirectory: 'ProtractorPackage2/ProtractorEndToEndTest-master3/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/node_modules/protractor/bin'
 
 
 - task: CmdLine@2
   inputs:
     script: 'npm install -g protractor'
-    workingDirectory: 'ProtractorPackage2/ProtractorEndToEndTest-master2/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/node_modules/protractor/bin'
+    workingDirectory: 'ProtractorPackage2/ProtractorEndToEndTest-master3/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/node_modules/protractor/bin'
 
 - task: CmdLine@2
   inputs:
     script: 'node node_modules/protractor/bin/protractor e2e/protractor.conf.js'
-    workingDirectory: 'ProtractorPackage2/ProtractorEndToEndTest-master2/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
+    workingDirectory: 'ProtractorPackage2/ProtractorEndToEndTest-master3/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
 
 
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: 'xmlresults.xml'
-    searchFolder: '$(System.DefaultWorkingDirectory)/ProtractorEndToEndTest-master2/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/testResults/$(time)/'
+    searchFolder: '$(System.DefaultWorkingDirectory)/ProtractorEndToEndTest-master3/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/testResults/$(time)/'
 
 
