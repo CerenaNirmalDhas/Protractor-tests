@@ -45,10 +45,6 @@ steps:
     script: 'node_modules/protractor/bin/protractor e2e/protractor.conf.js'
     workingDirectory: 'ProtractorPackage2/ProtractorEndToEndTest-master2/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
 
-- task: CmdLine@2
-  inputs:
-      script: "npm run protractor protractor.conf.js'"
-      workingDirectory: 'ProtractorPackage2/ProtractorEndToEndTest-master2/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/e2e/'
 
 - task: PublishTestResults@2
   inputs:
