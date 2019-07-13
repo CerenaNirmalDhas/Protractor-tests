@@ -42,7 +42,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'node_modules/protractor/bin/protractor e2e/protractor.conf.js'
+    script: 'node node_modules/protractor/bin/protractor e2e/protractor.conf.js'
     workingDirectory: 'ProtractorPackage2/ProtractorEndToEndTest-master2/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests'
 
 
