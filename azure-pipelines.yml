@@ -20,7 +20,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'dir'
-    workingDirectory: 'ProtractorPackage2/ProtractorEndToEndTest-master3'
+    workingDirectory: 'ProtractorPackage2/ProtractorEndToEndTest-master2'
 
 - task: Npm@1
   inputs:
