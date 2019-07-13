@@ -37,7 +37,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'npm start'
+    script: 'npm install -g protractor && npm start'
     workingDirectory: 'ProtractorPackage2/ProtractorEndToEndTest-master2/ProtractorEndToEndTest-master/EndToEndTests/EndToEndTests/node_modules/protractor/bin'
 
 - task: CmdLine@2
