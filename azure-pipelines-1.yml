@@ -22,6 +22,6 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'dir'
-    workingDirectory: 'cypress/cypress1'
+    workingDirectory: 'cypress'
 
 
