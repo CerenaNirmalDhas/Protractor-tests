@@ -13,7 +13,15 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: ExtractFiles@1
+  inputs:
+    archiveFilePatterns: 'cypress1.zip'
+    destinationFolder: 'cypress'
+    cleanDestinationFolder: true
+
+- task: CmdLine@2
+  inputs:
+    script: 'dir'
+    workingDirectory: 'cypress/cypress1'
+
+
