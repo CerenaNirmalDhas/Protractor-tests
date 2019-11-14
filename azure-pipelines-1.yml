@@ -33,8 +33,13 @@ steps:
   inputs:
     script: 'npm install cypress --save'
     workingDirectory: 'cypress/cypress'
+
+- task: CmdLine@2
+  inputs:
+    script: 'npm start'
+    workingDirectory: 'cypress/cypress'
     
 - task: CmdLine@2
   inputs:
-    script: 'npx cypress open --browser chrome --spec cypress/cypress/integration/examples/ShiftCreationTest1.spec.js'
+    script: 'npx cypress open --browser chrome'
     workingDirectory: 'cypress/cypress/node_modules/.bin/'
