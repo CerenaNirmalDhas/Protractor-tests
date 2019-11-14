@@ -42,5 +42,5 @@ steps:
     
 - task: CmdLine@2
   inputs:
-    script: 'npx cypress run --browser chrome --spec "cypress/cypress/integration/examples/ShiftCreationTest1.spec.js"'
+    script: 'npx cypress run --browser chrome --spec "cypress/cypress/cypress/integration/examples/ShiftCreationTest1.spec.js"'
     workingDirectory: 'cypress/cypress'
