@@ -31,13 +31,8 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'npm install -g cypress'
+    script: 'npm install cypress --save'
     workingDirectory: 'cypress/cypress'
-
-- task: Cache@2
-  inputs:
-    key: '../../cache/Cypress'
-    path: 'cache/Cypress'
     
 - task: CmdLine@2
   inputs:
