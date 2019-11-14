@@ -27,13 +27,18 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: 
+    workingDir: 'cypress/cypress'
 
 - task: CmdLine@2
   inputs:
     script: 'npm install -g cypress'
     workingDirectory: 'cypress/cypress'
 
+- task: Cache@2
+  inputs:
+    key: '../../cache/Cypress'
+    path: 'cache/Cypress'
+    
 - task: CmdLine@2
   inputs:
     script: 'npx cypress open'
