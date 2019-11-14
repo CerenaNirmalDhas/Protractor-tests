@@ -37,4 +37,4 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'npx cypress open'
-    workingDirectory: './node_modules/.bin/'
+    workingDirectory: 'cypress/cypress/node_modules/.bin/'
