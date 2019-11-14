@@ -36,5 +36,5 @@ steps:
     
 - task: CmdLine@2
   inputs:
-    script: 'npx cypress open'
+    script: 'npx cypress open --browser chrome'
     workingDirectory: 'cypress/cypress/node_modules/.bin/'
