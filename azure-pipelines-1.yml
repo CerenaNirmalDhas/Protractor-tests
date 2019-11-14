@@ -34,10 +34,6 @@ steps:
     script: 'npm install cypress --save'
     workingDirectory: 'cypress/cypress'
 
-- task: CmdLine@2
-  inputs:
-    script: 'npm start'
-    workingDirectory: 'cypress/cypress'
     
 - task: CmdLine@2
   inputs:
