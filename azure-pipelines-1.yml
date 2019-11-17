@@ -42,5 +42,5 @@ steps:
     
 - task: CmdLine@2
   inputs:
-    script: 'npx cypress run --browser chrome --spec "cypress/cypress/cypress/integration/examples/login.spec.js"'
+    script: 'npx cypress run --browser chrome --spec "cypress/cypress/cypress/integration/examples/*.js"'
     workingDirectory: 'cypress/cypress'
