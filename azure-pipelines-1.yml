@@ -37,10 +37,10 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'dir'
-    workingDirectory: 'cypress/cypress'
+    workingDirectory: 'cypress/cypress/cypress/integration/examples'
 
     
 - task: CmdLine@2
   inputs:
-    script: 'npx cypress run --browser chrome --spec "cypress/cypress/cypress/integration/examples/ShiftCreationTest1.spec.js"'
+    script: 'npx cypress run --browser chrome --spec "cypress/cypress/cypress/integration/examples/login.spec.js"'
     workingDirectory: 'cypress/cypress'
