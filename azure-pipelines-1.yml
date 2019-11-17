@@ -42,5 +42,12 @@ steps:
     
 - task: CmdLine@2
   inputs:
-    script: 'npx cypress run --browser chrome'
+    script: 'npx cypress run --browser chrome --reporter junit \
+  --reporter-options "mochaFile=TEST/TEST-output-[hash].xml,toConsole=true"'
     workingDirectory: 'cypress/cypress'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    testRunTitle: 'cypress test results'
