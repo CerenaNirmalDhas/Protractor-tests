@@ -45,6 +45,7 @@ steps:
     script: 'npx cypress run --browser chrome --reporter junit \
   --reporter-options "mochaFile=TEST/TEST-output-[hash].xml,toConsole=true"'
     workingDirectory: 'cypress/cypress'
+    failOnStderr: false
 
 - task: PublishTestResults@2
   inputs:
